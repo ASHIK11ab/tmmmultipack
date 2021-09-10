@@ -17,13 +17,13 @@ body {
   -moz-box-shadow: 0px -13px 20px 0px var(--navbar-box-shadow-color);
 }
 
-
 .container {
   width: 80%;
   margin: 0 auto;
   padding: .3rem 0;
 }
 
+/* The logo and navbar-nav is displayed as a row. */
 .navbar .container {
   display: flex;
   align-items: center;
@@ -39,15 +39,14 @@ body {
   font-style: italic;
 }
 
-.navbar-nav {
-  margin-right: 0;
-}
-
+/* Remove the default styling and display links in a row. */
 .navbar-nav ul {
   list-style: none;
   display: flex;
 }
 
+/* The `relative` position of `li` will be used by the `a:before`
+  element to highlight the link with a bottom border. */
 .navbar-nav ul li {
   position: relative;
 }
@@ -60,11 +59,18 @@ body {
   cursor: pointer;
 }
 
+/* Except the last link give a margin right to all other links. */
 .navbar-nav ul > :not(li:last-child) a {
   margin-right: 35px;
 }
 
-.navbar-nav a:hover:before, .selected-nav-link:before {
+.navbar-nav a:hover {
+  color: var(--brand-color);
+}
+
+/* Highlights a link with a border bottom. This class will
+  be injected by JavaScript on the clicked nav link element. */
+.selected-nav-link:before {
   position: absolute;
   bottom: -20px;
   content: "";
