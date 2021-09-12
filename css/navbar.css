@@ -1,7 +1,27 @@
+/* ------------------------
+      Table of Contents
+   ------------------------
+     1. General styles
+     2. Desktop navbar
+      2.1 Logo
+      2.2 Nav links
+     3. Mobile navbar
+      3.1 Nav links
+*/
+
+/* ------------------------
+      1. General styles
+   ------------------------ */
 :root {
   --navbar-box-shadow-color: #6b8aa2;
+  --mobile-navbar-box-shadow: #505253;
   --brand-color: #1b9cfc;
   --nav-link-color: #282d32;
+  --mobile-nav-link-color: #797979;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body { 
@@ -9,6 +29,11 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* ------------------------
+      2. Desktop navbar
+   ------------------------ */
+
+/* Begining of styles for desktop navbar. */
 .navbar {
   position: relative;
   width: 100%;
@@ -28,7 +53,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
 }
+
+/* ------------------------
+      2.1 Logo
+   ------------------------ */
 
 .navbar .logo-text {
   display: block;
@@ -37,7 +67,12 @@ body {
   font-size: 27px;
   font-weight: 700;
   font-style: italic;
+  user-select: none;
 }
+
+/* ------------------------
+      2.2 Nav links
+   ------------------------ */
 
 /* Remove the default styling and display links in a row. */
 .navbar-nav ul {
@@ -60,7 +95,7 @@ body {
 }
 
 /* Except the last link give a margin right to all other links. */
-.navbar-nav ul > :not(li:last-child) a {
+.navbar .navbar-nav ul > :not(li:last-child) a {
   margin-right: 35px;
 }
 
@@ -87,4 +122,89 @@ body {
 */
 .navbar-nav ul > :not(li:last-child) a:before {
   width: calc(100% - 35px);
+}
+
+/* End of styles for desktop navbar */
+
+/* Start of styles for mobile navbar */
+.home-icon {
+  background: url('../icons/home.svg');
+}
+
+.products-icon {
+  background: url('../icons/product.svg');
+}
+
+.contact-icon {
+  background: url('../icons/contact.svg');
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+/* ------------------------
+      3. Mobile navbar
+   ------------------------ */
+
+.mobile-navbar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 2px 15px 20px 0px var(--mobile-navbar-box-shadow);
+  -webkit-box-shadow: 2px 15px 20px 0px var(--mobile-navbar-box-shadow);
+  -moz-box-shadow: 2px 15px 20px 0px var(--mobile-navbar-box-shadow);
+}
+
+.mobile-navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding-left: 12px;
+  margin: 7px 0;
+}
+
+/* ------------------------
+      3.1 Nav links
+   ------------------------ */
+
+.mobile-navbar  a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  user-select: none;
+  filter: invert(52%) sepia(0%) saturate(1284%)
+   hue-rotate(225deg) brightness(91%) contrast(79%);
+}
+
+.mobile-navbar .selected-nav-link-mobile {
+  filter: invert(62%) sepia(58%) saturate(5888%)
+   hue-rotate(185deg) brightness(103%) contrast(98%);
+}
+
+.mobile-navbar span {
+  margin-top: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--mobile-nav-link-color);
+}
+/* End of styles for mobile navbar. */
+
+/* ------------------------
+      4. Media queries
+   ------------------------ */
+
+/* Hide desktop navbar on small devices. */
+@media (max-width: 700px) {
+  .navbar-nav { display: none; } 
+}
+
+/* Hide mobile navbar on large devices. */
+@media (min-width: 701px) {
+  .mobile-navbar { display: none; }
 }
