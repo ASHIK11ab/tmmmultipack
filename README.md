@@ -1,14 +1,19 @@
 ## This is a static website created for my fathers business.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-success?style=flat-square">&emsp;
+  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=success">&emsp;
+  <img src="https://img.shields.io/static/v1?label=Deployment&message=Github Pages&color=blue">&emsp;
+  <img src="https://img.shields.io/static/v1?label=Under Development&message=True&color=blueviolet">&emsp;
 </p>
 
-- Live site can be found [here.](https://tmmmultipack.com)
+- To see the live site click [here.](https://tmmmultipack.com)
 - Technologies used:
   - HTML5
   - CSS3
+  - JavaScript
   - BOOTSTRAP4
+
+- This site is under complete restoration. To see the development site click [here.](https://tmmmultipack.com/new-index.html)
 
 ## Contributors:
 <a href="https://github.com/ASHIK11ab">
