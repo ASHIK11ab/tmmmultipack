@@ -1,3 +1,5 @@
+/* This stylesheet contains styles related to 
+  the navigation bars of the site */
 /* ------------------------
       Table of Contents
    ------------------------
@@ -7,6 +9,7 @@
       2.2 Nav links
      3. Mobile navbar
       3.1 Nav links
+     4. Media Queries
 */
 
 /* ------------------------
@@ -16,6 +19,8 @@
   --navbar-box-shadow-color: #6b8aa2;
   --mobile-navbar-box-shadow: #505253;
   --brand-color: #1b9cfc;
+  --secondary-color: #bd35f6;
+  --secondary-color-variant: #763492;
   --nav-link-color: #282d32;
   --mobile-nav-link-color: #797979;
 }
@@ -37,15 +42,16 @@ body {
 .navbar {
   position: relative;
   width: 100%;
-  box-shadow: 0px -13px 20px 0px var(--navbar-box-shadow-color);
-  -webkit-box-shadow: 0px -13px 20px 0px var(--navbar-box-shadow-color);
-  -moz-box-shadow: 0px -13px 20px 0px var(--navbar-box-shadow-color);
+  background-color: #fff;
+  box-shadow: 0px -13px 23px 0px var(--navbar-box-shadow-color);
+  -webkit-box-shadow: 0px -13px 23px 0px var(--navbar-box-shadow-color);
+  -moz-box-shadow: 0px -13px 23px 0px var(--navbar-box-shadow-color);
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
-  padding: .3rem 0;
+  box-sizing: border-box;
 }
 
 /* The logo and navbar-nav is displayed as a row. */
@@ -54,6 +60,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 50px;
+  padding: 32px 0;
 }
 
 /* ------------------------
@@ -157,6 +164,7 @@ body {
   box-shadow: 2px 15px 20px 0px var(--mobile-navbar-box-shadow);
   -webkit-box-shadow: 2px 15px 20px 0px var(--mobile-navbar-box-shadow);
   -moz-box-shadow: 2px 15px 20px 0px var(--mobile-navbar-box-shadow);
+  z-index: 1;
 }
 
 .mobile-navbar ul {
