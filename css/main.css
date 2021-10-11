@@ -1,0 +1,191 @@
+/* This stylesheet contains styles related to 
+  the main (hero) section of the website */
+/* ------------------------
+      Table of Contents
+   ------------------------
+     1. Main section
+     2. Call to actions
+     3. Brand logo
+     4. Media Queries
+*/
+
+/* ------------------------
+      1. Main section
+   ------------------------ */
+/* Displaying the main content and brand logo using
+  the row layout. */
+.main-section .container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-section .main-content {
+  width: 60%;
+}
+
+.main-content h1 {
+  font-size: 60px;
+  font-style: italic;
+  color: var(--brand-color);
+  letter-spacing: 5.5px;
+}
+
+.main-content p {
+  margin: -30px 0 40px 0;
+  color: var(--secondary-color);
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: 2px;
+}
+
+/* ------------------------
+      2. Call to actions
+   ------------------------ */
+.main-content .call-to-actions {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.call-to-actions a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.call-to-actions .primary {
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: var(--brand-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.call-to-actions .primary:hover {
+  background-color: var(--secondary-color) ;
+  transition: background-color .5s;
+}
+
+.call-to-actions .secondary {
+  position: relative;
+  padding-bottom: 10px;
+  margin-left: 50px;
+  color: var(--secondary-color-variant);
+  word-spacing: 5px;
+  letter-spacing: 2.5px;
+}
+
+/* Small indicatior which interacts on hover state */
+.call-to-actions .secondary:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--brand-color);
+  border-radius: 6px;
+}
+
+.call-to-actions .secondary:hover:before {
+  bottom: -5px;
+  transition: bottom .3s;
+}
+
+/* ------------------------
+      3. Brand logo
+   ------------------------ */
+.main-section .brand-logo {
+  text-align: center;
+}
+
+.main-section .brand-logo img {
+  width: 350px;
+  height: 350px;
+}
+
+/* ------------------------
+      4. Media Queries
+   ------------------------ */
+@media (min-width: 1001px) {
+  .main-section {
+    margin-top: 5rem;
+  }
+
+  .main-content h1 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* Displaying the main content to full device width
+    on medium and small devices. */
+  .main-section .main-content {
+    position: relative;
+    width: 100%;
+  }
+
+  .main-content h1 {
+    font-size: 55px;
+  }
+
+  .call-to-actions {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  .call-to-actions a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  /* Wrapping the main section and brand logo */
+  .main-section .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Reducing the font sizes of headline for small devices. */
+  .main-content h1 {
+    font-size: 45px;
+    font-weight: 800;
+  }
+
+  .main-content p {
+    font-size: 23px;
+    margin: -10px 0 2rem 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-content h1 {
+    font-size: 25px;
+  }
+
+  .main-content p {
+    font-size: 18px;
+  }
+
+  /* Displaying the call to action buttons in column layout
+    on extra small devices. */
+  .main-content .call-to-actions {
+    flex-direction: column;
+  }
+
+  .call-to-actions .secondary {
+    margin: 30px 0 0 0;
+  }
+
+  .main-section .brand-logo img {
+    width: 90%;
+    height: 90%;
+  }
+}
